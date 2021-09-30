@@ -1,0 +1,118 @@
+<mvc:View xmlns:form="sap.ui.layout.form"
+	controllerName="zw.co.appsareus.fioricalculator.controller.Home"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:l="sap.ui.layout"
+	displayBlock="true"
+	height="100%"
+	busyIndicatorDelay="0"
+>
+    <Page 
+        title="Fiori Calculator">
+        <f:Form 
+            id="FormChange354" 
+            editable="true">
+            <f:layout>
+                <f:ResponsiveGridLayout
+                    labelSpanXL="3"
+                    labelSpanL="3"
+                    labelSpanM="3"
+                    adjustLabelSpan="false"
+                    emptySpanXL="4"
+                    emptySpanL="4"
+                    emptySpanM="4"
+                    emptySpanS="0"
+                    columnsXL="1"
+                    columnsL="1"
+                    singleContainerFullSize="false" />
+            </f:layout>
+            <f:formContainers>
+                <f:FormContainer>
+                    <f:formElements>
+                        <f:FormElement>
+                            <f:fields>
+                                <Input
+                                    id="numberInput"
+                                    type="Number"
+                                    placeholder="0"
+                                    editable="true"
+                                    class="sapUiSmallMarginBottom" 
+                                    textAlign="End"/>
+                            </f:fields>
+                        </f:FormElement>
+                    </f:formElements>
+                </f:FormContainer>
+            </f:formContainers>
+        </f:Form>
+        <l:VerticalLayout id="containerLayout" width="100%">
+
+            <l:BlockLayout>
+                <l:BlockLayoutRow accentCells="Accent1">
+                    <l:BlockLayoutCell>
+                        <l:BlockLayoutCell>
+                            <l:VerticalLayout
+                                enabled="true"
+                                width="60%">
+                                <l:content>
+                                    <l:BlockLayout>
+                                        <l:BlockLayoutRow accentCells="Accent1">
+                                            <l:BlockLayoutCell>
+                                                <l:BlockLayoutCell width="1">
+                                                    <Button type="Default" text="7" press="onInput($event,7)" id="btn7"/>
+                                                    <Button type="Default" text="8" press="onInput($event,8)" id="btn8"/>
+                                                    <Button type="Default" text="9" press="onInput($event,9)" id="btn9"/>
+                                                </l:BlockLayoutCell>
+                                                <l:BlockLayoutCell>
+                                                    <Button type="Default" text="4" press="onInput($event,4)" id="btn4"/>
+                                                    <Button type="Default" text="5" press="onInput($event,5)" id="btn5"/>
+                                                    <Button type="Default" text="6" press="onInput($event,6)" id="btn6"/>
+                                                </l:BlockLayoutCell>
+                                                <l:BlockLayoutCell>
+                                                    <Button type="Default" text="1" press="onInput($event,1)" id="btn1"/>
+                                                    <Button type="Default" text="2" press="onInput($event,2)" id="btn2"/>
+                                                    <Button type="Default" text="3" press="onInput($event,3)" id="btn3"/>
+                                                </l:BlockLayoutCell>
+                                                <l:BlockLayoutCell>
+                                                    <Button type="Default" text="-/+" press="onNeg" id="btnNeg"/>
+                                                    <Button type="Default" text="0" press="onInput($event,0)" id="btn0"/>
+                                                    <Button type="Default" text="." press="onInput($event,'.')" id="btnComma"/>
+                                                </l:BlockLayoutCell>
+                                            </l:BlockLayoutCell>
+                                        </l:BlockLayoutRow>
+                                    </l:BlockLayout>
+                                </l:content>
+                            </l:VerticalLayout>
+                            <l:VerticalLayout
+                                enabled="true"
+                                width="40%">
+                                <l:content>
+                                    <l:BlockLayout>
+                                        <l:BlockLayoutRow accentCells="Accent1">
+                                            <l:BlockLayoutCell width="1">
+                                                <l:BlockLayoutCell  width="1">
+                                                    <Button type="Default" text="+" press="onAdd" id="btnPlus"/>
+                                                    <Button type="Default" text="C" press="onClear" id="btnClear"/>
+                                                </l:BlockLayoutCell>
+                                                <l:BlockLayoutCell  width="1">
+                                                    <Button type="Default" text="-" press="onMinus" id="btnMinus"/>
+                                                    <Button type="Default" text="/" press="onDivide" id="btnDivide"/>
+                                                </l:BlockLayoutCell>
+                                                <l:BlockLayoutCell>
+                                                    <Button type="Default" text="X" press="onMultiply" id="btnMultiply"/>
+                                                    <Button type="Default" text="=" press="onEquals" id="btnEquals"/>
+                                                </l:BlockLayoutCell>
+                                            </l:BlockLayoutCell>
+                                        </l:BlockLayoutRow>
+                                    </l:BlockLayout>
+                                </l:content>
+                            </l:VerticalLayout>
+                        </l:BlockLayoutCell>
+
+                    </l:BlockLayoutCell>
+                </l:BlockLayoutRow>
+            </l:BlockLayout>
+        </l:VerticalLayout>
+    </Page>
+</mvc:View>
